@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>反算结果</title>
+</head>
+<body>
+<style type="text/css">
+    body {background-image: url('timg.jpg')}
+    body{background-color: #81d2ff}
+</style>
+<h1 align="center">高斯反算结果</h1>
+<p>
+    <label for longitude>经度:</label>
+    <input type="text"  id="longitude"value="th:{L}"disabled/>
+
+</p>
+
+<p>
+    <label for latitude>纬度:</label>
+    <input type="text" id="latitude"value="th:{B}"disabled/>
+</p>
+
+<p>
+    <a href="/gauss">
+        <button type="button" id="button">返回</button></a>
+</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>正算结果</title>
+</head>
+<body>
+<style type="text/css">
+    body {background-image: url('timg.jpg')}
+    body{background-color: #81d2ff}
+</style>
+<h1 align="center">高斯正算结果</h1>
+<p>
+    <label for x>x:</label>
+    <input type="text"  id="x" th:value="${x}" disabled/>
+
+</p>
+
+<p>
+    <label for y>y:</label>
+    <input type="text" id="y" th:value="${y}" disabled/>
+</p>
+
+<p>
+    <a href="/gauss">
+        <button type="button" id="button">返回</button></a>
+</p>
+</body>
+</html>

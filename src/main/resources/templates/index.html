@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Gauss forward and backward calculation</title>
+</head>
+
+<body >
+<style type="text/css">
+    body {background-image: url('timg.jpg')}
+    body{background-color: #81d2ff}
+</style>
+<h1 align="center">高斯正反算</h1>
+      <form >
+
+          <table>
+              <tr>
+                  <td><font color="red">*</font>经度(Longitude):</td>
+                  <td><input id="1" type="text"name="Longitude"value="" /></td>
+              </tr>
+
+              <tr>
+                  <td><font color="red">*</font>纬度(Latitude):</td>
+                  <td><input id="2" type="text"name="Latitude"value="" /></td>
+              </tr>
+
+              <tr>
+                  <td><font color="red">*</font>参考椭球</td>
+                  <td>
+                      <select id="3">
+                          <option value ="0">海福特椭球</option>
+                          <option value ="1">北京54坐标系基准椭球</option>
+                          <option value ="2">西安80坐标系基准椭球</option>
+                          <option value ="3">WGS-84椭球</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td><font color="red">*</font>投影带</td>
+                  <td>
+                      <select id="4">
+                          <option value ="3">三度带</option>
+                          <option value ="6">六度带</option>
+                      </select>
+                  </td>
+              </tr>
+          </table>
+          <button type="button" id="button1" onclick=javascript:jump1()>正算</button>
+
+
+<!--          获取参数-->
+          <script type="text/javascript">
+              function jump1(){
+                  const s1=document.getElementById("1").value;
+                  const s2=document.getElementById("2").value;
+                  const s3=document.getElementById("3").value;
+                  const s4=document.getElementById("4").value;
+                  window.location.href="/gauss/go?s1="+s1+"&s2="+s2+"&s3="+s3+"&s4="+s4;
+              }
+
+          </script>
+          <table>
+              <tr>
+                  <td><font color="red">*</font>x:</td>
+                  <td><input id="5" type="text"name="Longitude"value="" /></td>
+              </tr>
+
+              <tr>
+                  <td><font color="red">*</font>y:</td>
+                  <td><input id="6" type="text"name="Latitude"value="" /></td>
+              </tr>
+              <tr>
+                  <td><font color="red">*</font>参考椭球</td>
+                  <td>
+                      <select id="7">
+                          <option value ="0">海福特椭球</option>
+                          <option value ="1">北京54坐标系基准椭球</option>
+                          <option value ="2">西安80坐标系基准椭球</option>
+                          <option value ="3">WGS-84椭球</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td><font color="red">*</font>投影带</td>
+                  <td>
+                      <select id="8">
+                          <option value ="3">三度带</option>
+                          <option value ="6">六度带</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td><font color="red">*</font>带号:</td>
+                  <td><input id="9" type="text"name="Latitude"value="" /></td>
+              </tr>
+          </table>
+          <button type="button" id="button2" onclick=javascript:jump2()>反算</button>
+          <!--          获取参数-->
+          <script type="text/javascript">
+              function jump2(){
+                  const s1=document.getElementById("5").value;
+                  const s2=document.getElementById("6").value;
+                  const s3=document.getElementById("7").value;
+                  const s4=document.getElementById("8").value;
+                  const s5=document.getElementById("9").value;
+                  window.location.href="/gauss/go?s1="+s1+"&s2="+s2+"&s3="+s3+"&s4="+s4+"&s5="+s5;
+              }
+
+          </script>
+      </form>
+
+
+</body>
+</html>
